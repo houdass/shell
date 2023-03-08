@@ -7,7 +7,8 @@ export const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
-        remoteEntry: 'http://localhost:2000/remoteEntry.js',
+        // remoteEntry: 'http://localhost:2000/remoteEntry.js',
+        remoteEntry: 'https://houdass.github.io/orders/remoteEntry.js',
         exposedModule: './OrdersModule',
       }).then((m) => m.OrdersModule),
   },
