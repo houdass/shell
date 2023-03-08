@@ -12,4 +12,14 @@ export const routes: Routes = [
         exposedModule: './OrdersModule',
       }).then((m) => m.OrdersModule),
   },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        // remoteEntry: 'http://localhost:3000/remoteEntry.js',
+        remoteEntry: 'https://houdass.github.io/dashboard/remoteEntry.js',
+        exposedModule: './DashboardModule',
+      }).then((m) => m.DashboardModule),
+  },
 ];
