@@ -22,6 +22,8 @@ MIT
 @angular/router
 MIT
 
+mf-cart
+
 rxjs
 Apache-2.0
                                Apache License
