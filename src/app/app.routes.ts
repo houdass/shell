@@ -100,15 +100,4 @@ export const routes: Routes = [
         exposedModule: './CartModule',
       }).then((m) => m.CartModule),
   },
-  {
-    path: 'demo',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: isOnGithub
-          ? 'https://houdass.github.io/demo/remoteEntry.js'
-          : 'http://localhost:7000/remoteEntry.js',
-        exposedModule: './DemoModule',
-      }).then((m) => m.DemoModule),
-  },
 ];
