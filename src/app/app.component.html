@@ -1,5 +1,150 @@
-<a routerLink="orders">orders</a> |
-<a routerLink="dashboard">dashboard</a>
-<h1>SHELL BEGIN</h1>
-<router-outlet></router-outlet>
-<h1>SHELL END</h1>
+<div class="container">
+  <header class="header">
+    <img src="assets/logo.png" alt="Trillo logo" class="logo">
+
+    <form action="#" class="search">
+      <input type="text" class="search__input" placeholder="Search perfumes ...">
+      <button class="search__button">
+        <svg class="search__icon">
+          <use xlink:href="assets/sprite.svg#icon-magnifying-glass"></use>
+        </svg>
+      </button>
+    </form>
+
+    <nav class="user-nav">
+      <div class="user-nav__icon-box">
+        <svg class="user-nav__icon">
+          <use xlink:href="assets/sprite.svg#icon-bookmark"></use>
+        </svg>
+        <!--<span class="user-nav__notification">7</span>-->
+      </div>
+      <div class="user-nav__icon-box">
+        <svg class="user-nav__icon">
+          <use xlink:href="assets/sprite.svg#icon-chat"></use>
+        </svg>
+        <!--<span class="user-nav__notification">13</span>-->
+      </div>
+      <div class="user-nav__icon-box" routerLink="cart">
+        <svg class="user-nav__icon">
+          <use xlink:href="assets/sprite.svg#icon-cart"></use>
+        </svg>
+        <span class="user-nav__notification">{{ cartService.count() }}</span>
+      </div>
+      <div class="user-nav__user">
+        <img src="assets/user.jpg" alt="User photo" class="user-nav__user-photo">
+        <span class="user-nav__user-name">Youness</span>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <nav class="sidebar">
+      <ul class="side-nav">
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="home">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-home"></use>
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="dashboard">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-dashboard"></use>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="products">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-light-up"></use>
+            </svg>
+            <span>Products</span>
+          </a>
+        </li>
+
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="cart">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-cart"></use>
+            </svg>
+            <span>Cart</span>
+          </a>
+        </li>
+
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="testimonials">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-star"></use>
+            </svg>
+            <span>Testimonials</span>
+          </a>
+        </li>
+
+        <li class="side-nav__item" routerLinkActive="side-nav__item--active">
+          <a class="side-nav__link" routerLink="full-app">
+            <svg class="side-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-key"></use>
+            </svg>
+            <span>Full App</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="legal">
+        &copy; 2022 by Trillo. All rights reserved.
+      </div>
+    </nav>
+    <main class="app-view">
+      <div class="overview">
+        <h1 class="overview__heading">
+          Our perfume store on trustpilot
+        </h1>
+        <div class="overview__stars">
+          <svg class="overview__icon-star">
+            <use xlink:href="assets/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="assets/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="assets/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="assets/sprite.svg#icon-star"></use>
+          </svg>
+          <svg class="overview__icon-star">
+            <use xlink:href="assets/sprite.svg#icon-star"></use>
+          </svg>
+        </div>
+        <div class="overview__location">
+          <svg class="overview__icon-location">
+            <use xlink:href="assets/sprite.svg#icon-location-pin"></use>
+          </svg>
+          <a class="btn-inline">Lausanne, Switzerland</a>
+        </div>
+        <div class="overview__rating">
+          <div class="overview__rating-average">8.9</div>
+          <div class="overview__rating-count">532 votes</div>
+        </div>
+      </div>
+     <div class="remote-container">
+       <router-outlet></router-outlet>
+     </div>
+      <div class="detail">
+        <div class="description">
+          <div>
+            <router-outlet name="dashboard"></router-outlet>
+          </div>
+          <router-outlet name="products"></router-outlet>
+        </div>
+        <div class="user-reviews">
+          <router-outlet name="testimonials"></router-outlet>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
