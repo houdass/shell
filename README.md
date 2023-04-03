@@ -1,27 +1,29 @@
+![Module federation](src/assets/mf.png)
+
 # Shell
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+#### Port: 1234
 
-## Development server
+# Testimonials
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### https://github.com/houdass/testimonials
+#### https://houdass.github.io/testimonials
+#### Port: 2000
 
-## Code scaffolding
+# Dashboard
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### https://github.com/houdass/dashboard
+#### https://houdass.github.io/dashboard
+#### Port: 3000
 
-## Build
+# Products
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### https://github.com/houdass/products
+#### https://houdass.github.io/products
+#### Port: 4000
 
-## Running unit tests
+# Cart
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### https://github.com/houdass/cart
+#### https://houdass.github.io/cart
+#### Port: 5000
